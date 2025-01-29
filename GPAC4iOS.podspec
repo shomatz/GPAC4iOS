@@ -19,7 +19,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.3'
   s.requires_arc = true
   
-  s.header_mappings_dir = 'Classes/include/**/*.h'
   s.source_files = 'Classes/**/*.{h,cpp,c,m}'
+  s.header_mappings_dir = 'Classes/include/**/*.h'
+  s.public_header_files = 'Classes/include/**/*.h'
+  s.preserve_paths = 'Classes/include/**/*.h'
   s.xcconfig = {'CLANG_ENABLE_MODULES' => 'NO' }
 end
